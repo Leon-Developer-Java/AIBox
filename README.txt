@@ -1,0 +1,1 @@
+ui> ui转化py命令，在ui所处的问价夹中，只用cmd启动控制台，键入——pyuic5 xxx.ui -o xxx.py
