@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="./">
+    <file>icon/aislogo.png</file>
+    <file>icon/chips.png</file>
+    <file>icon/logout.png</file>
+    <file>icon/监控.png</file>
+    <file>icon/配置管理.png</file>
+    <file>icon/权限.png</file>
+    <file>icon/系统运转情况.png</file>
+  </qresource>
+</RCC>

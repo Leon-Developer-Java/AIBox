@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1052</width>
-    <height>669</height>
+    <width>1608</width>
+    <height>867</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,14 +22,14 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>1031</width>
-      <height>650</height>
+      <width>1591</width>
+      <height>851</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>920</width>
-      <height>650</height>
+      <width>0</width>
+      <height>0</height>
      </size>
     </property>
     <property name="frameShape">
@@ -66,11 +66,14 @@
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
+        <string notr="true">#TopFrame{
+background-color: rgb(255, 255, 255);
 border-top-left-radius:20px;
 border-top-right-radius:20px;
 border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;</string>
+border-bottom-right-radius: 20px;
+}
+</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -128,17 +131,20 @@ border-bottom-right-radius: 20px;</string>
             <number>0</number>
            </property>
            <item>
-            <widget class="QPushButton" name="blank_1">
-             <property name="maximumSize">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
               <size>
-               <width>20</width>
-               <height>16777215</height>
+               <width>30</width>
+               <height>20</height>
               </size>
              </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
+            </spacer>
            </item>
            <item alignment="Qt::AlignLeft">
             <widget class="QPushButton" name="user">
@@ -151,9 +157,22 @@ font: 12pt &quot;方正姚体&quot;;</string>
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../icon/chips.png</normaloff>../../icon/chips.png</iconset>
+               <normaloff>../resources/icon/chips.png</normaloff>../resources/icon/chips.png</iconset>
              </property>
             </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -197,6 +216,19 @@ font: 12pt &quot;方正姚体&quot;;</string>
            <property name="bottomMargin">
             <number>0</number>
            </property>
+           <item>
+            <spacer name="blank_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
            <item alignment="Qt::AlignRight">
             <widget class="QPushButton" name="logout">
              <property name="minimumSize">
@@ -218,26 +250,29 @@ QPushButton:hover{
 }</string>
              </property>
              <property name="text">
-              <string>Logout</string>
+              <string/>
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../icon/logout.png</normaloff>../../icon/logout.png</iconset>
+               <normaloff>../resources/icon/关闭.png</normaloff>../resources/icon/关闭.png</iconset>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="blank_2">
-             <property name="maximumSize">
+            <spacer name="blank_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
               <size>
-               <width>20</width>
-               <height>16777215</height>
+               <width>30</width>
+               <height>20</height>
               </size>
              </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -250,7 +285,7 @@ QPushButton:hover{
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
          <horstretch>0</horstretch>
-         <verstretch>7</verstretch>
+         <verstretch>10</verstretch>
         </sizepolicy>
        </property>
        <property name="styleSheet">
@@ -345,7 +380,7 @@ qproperty-alignment: 'AlignCenter';</string>
               <item row="0" column="0">
                <widget class="QToolButton" name="SystemInfo">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -382,11 +417,11 @@ QPushButton:default {
 }</string>
                 </property>
                 <property name="text">
-                 <string>    系统监控</string>
+                 <string>系统监控</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../icon/监控.png</normaloff>../../icon/监控.png</iconset>
+                  <normaloff>../resources/icon/监控.png</normaloff>../resources/icon/监控.png</iconset>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
@@ -435,11 +470,11 @@ QPushButton:default {
 }</string>
                 </property>
                 <property name="text">
-                 <string>    权限设置</string>
+                 <string>权限设置</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../icon/权限.png</normaloff>../../icon/权限.png</iconset>
+                  <normaloff>../resources/icon/权限.png</normaloff>../resources/icon/权限.png</iconset>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
@@ -494,11 +529,11 @@ QPushButton:default {
 }</string>
                 </property>
                 <property name="text">
-                 <string>    智能算法</string>
+                 <string>智能算法</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../icon/aislogo.png</normaloff>../../icon/aislogo.png</iconset>
+                  <normaloff>../resources/icon/aislogo.png</normaloff>../resources/icon/aislogo.png</iconset>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
@@ -534,7 +569,7 @@ QPushButton:default {
          <widget class="QFrame" name="frame_7">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>4</horstretch>
+            <horstretch>16</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
@@ -658,8 +693,8 @@ border-bottom-right-radius: 20px;</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>857</x>
-     <y>41</y>
+     <x>1568</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>984</x>

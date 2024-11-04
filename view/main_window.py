@@ -9,22 +9,18 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QFileInfo
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1052, 669)
-
-        root = QFileInfo(__file__).absolutePath()
-
+        MainWindow.resize(1608, 867)
         MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.MainFrame = QtWidgets.QFrame(self.centralwidget)
-        self.MainFrame.setGeometry(QtCore.QRect(10, 10, 1031, 650))
-        self.MainFrame.setMinimumSize(QtCore.QSize(920, 650))
+        self.MainFrame.setGeometry(QtCore.QRect(10, 10, 1591, 851))
+        self.MainFrame.setMinimumSize(QtCore.QSize(0, 0))
         self.MainFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.MainFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.MainFrame.setLineWidth(0)
@@ -39,11 +35,14 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(1)
         sizePolicy.setHeightForWidth(self.TopFrame.sizePolicy().hasHeightForWidth())
         self.TopFrame.setSizePolicy(sizePolicy)
-        self.TopFrame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                    "border-top-left-radius:20px;\n"
-                                    "border-top-right-radius:20px;\n"
-                                    "border-bottom-left-radius: 20px;\n"
-                                    "border-bottom-right-radius: 20px;")
+        self.TopFrame.setStyleSheet("#TopFrame{\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-top-left-radius:20px;\n"
+"border-top-right-radius:20px;\n"
+"border-bottom-left-radius: 20px;\n"
+"border-bottom-right-radius: 20px;\n"
+"}\n"
+"")
         self.TopFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.TopFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.TopFrame.setObjectName("TopFrame")
@@ -65,19 +64,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.blank_1 = QtWidgets.QPushButton(self.TopFrame_left)
-        self.blank_1.setMaximumSize(QtCore.QSize(20, 16777215))
-        self.blank_1.setText("")
-        self.blank_1.setObjectName("blank_1")
-        self.horizontalLayout_2.addWidget(self.blank_1)
+        spacerItem = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem)
         self.user = QtWidgets.QPushButton(self.TopFrame_left)
         self.user.setStyleSheet("border:none;\n"
-                                "font: 12pt \"方正姚体\";")
+"font: 12pt \"方正姚体\";")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../resources/icon/chips.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./resources/icon/chips.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.user.setIcon(icon)
         self.user.setObjectName("user")
         self.horizontalLayout_2.addWidget(self.user, 0, QtCore.Qt.AlignLeft)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem1)
         self.horizontalLayout.addWidget(self.TopFrame_left)
         self.TopFrame_right = QtWidgets.QFrame(self.TopFrame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -94,37 +92,37 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem2)
         self.logout = QtWidgets.QPushButton(self.TopFrame_right)
         self.logout.setMinimumSize(QtCore.QSize(0, 20))
         self.logout.setToolTipDuration(0)
         self.logout.setStyleSheet("QPushButton{\n"
-                                  "    border:none;\n"
-                                  "}\n"
-                                  "\n"
-                                  "QPushButton:hover{\n"
-                                  "    padding-bottom:3px\n"
-                                  "}")
+"    border:none;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"    padding-bottom:3px\n"
+"}")
+        self.logout.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../resources/icon/logout.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./resources/icon/关闭.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.logout.setIcon(icon1)
         self.logout.setObjectName("logout")
         self.horizontalLayout_3.addWidget(self.logout, 0, QtCore.Qt.AlignRight)
-        self.blank_2 = QtWidgets.QPushButton(self.TopFrame_right)
-        self.blank_2.setMaximumSize(QtCore.QSize(20, 16777215))
-        self.blank_2.setText("")
-        self.blank_2.setObjectName("blank_2")
-        self.horizontalLayout_3.addWidget(self.blank_2)
+        spacerItem3 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem3)
         self.horizontalLayout.addWidget(self.TopFrame_right)
         self.verticalLayout.addWidget(self.TopFrame)
         self.WorkSpaceFrame = QtWidgets.QFrame(self.MainFrame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(7)
+        sizePolicy.setVerticalStretch(10)
         sizePolicy.setHeightForWidth(self.WorkSpaceFrame.sizePolicy().hasHeightForWidth())
         self.WorkSpaceFrame.setSizePolicy(sizePolicy)
         self.WorkSpaceFrame.setStyleSheet("border-top-left-radius:20px;\n"
-                                          "border-bottom-left-radius: 20px;\n"
-                                          "")
+"border-bottom-left-radius: 20px;\n"
+"")
         self.WorkSpaceFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.WorkSpaceFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.WorkSpaceFrame.setLineWidth(0)
@@ -140,10 +138,10 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.ToolbarFrame.sizePolicy().hasHeightForWidth())
         self.ToolbarFrame.setSizePolicy(sizePolicy)
         self.ToolbarFrame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                        "\n"
-                                        "qproperty-alignment: \'AlignCenter\';\n"
-                                        "border-top-right-radius:20px;     \n"
-                                        "border-bottom-right-radius: 20px;")
+"\n"
+"qproperty-alignment: \'AlignCenter\';\n"
+"border-top-right-radius:20px;     \n"
+"border-bottom-right-radius: 20px;")
         self.ToolbarFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.ToolbarFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ToolbarFrame.setObjectName("ToolbarFrame")
@@ -153,7 +151,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.ToolbarWidget = QtWidgets.QWidget(self.ToolbarFrame)
         self.ToolbarWidget.setStyleSheet("background-color: rgb(228, 228, 228);\n"
-                                         "qproperty-alignment: \'AlignCenter\';")
+"qproperty-alignment: \'AlignCenter\';")
         self.ToolbarWidget.setObjectName("ToolbarWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.ToolbarWidget)
         self.gridLayout.setContentsMargins(0, 10, 0, 0)
@@ -167,33 +165,33 @@ class Ui_MainWindow(object):
         self.SystemInfo.setSizePolicy(sizePolicy)
         self.SystemInfo.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.SystemInfo.setStyleSheet("/* 默认 */\n"
-                                      "QToolButton{   \n"
-                                      "    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
-                                      "    border-bottom: 7px outset transparent;\n"
-                                      "    border-right: 3px outset transparent;\n"
-                                      "    border-left: 3px outset transparent;                 \n"
-                                      "    background-color: rgb(228, 228, 228);\n"
-                                      "    min-width: 80px;\n"
-                                      "    min-height: 40px;\n"
-                                      "     \n"
-                                      "}\n"
-                                      "\n"
-                                      "/* 鼠标悬停 */\n"
-                                      "QToolButton:hover{\n"
-                                      "    background-color: rgb(205, 205, 205);\n"
-                                      "}\n"
-                                      "\n"
-                                      "/* 点击和按下 */\n"
-                                      "QToolButton:pressed,QToolButton:checked{\n"
-                                      "    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
-                                      "    background-color: rgb(246, 246, 246);   \n"
-                                      "}\n"
-                                      "\n"
-                                      "QPushButton:default {\n"
-                                      "    border-color: navy; /* make the default button prominent */\n"
-                                      "}")
+"QToolButton{   \n"
+"    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
+"    border-bottom: 7px outset transparent;\n"
+"    border-right: 3px outset transparent;\n"
+"    border-left: 3px outset transparent;                 \n"
+"    background-color: rgb(228, 228, 228);\n"
+"    min-width: 80px;\n"
+"    min-height: 40px;\n"
+"     \n"
+"}\n"
+"\n"
+"/* 鼠标悬停 */\n"
+"QToolButton:hover{\n"
+"    background-color: rgb(205, 205, 205);\n"
+"}\n"
+"\n"
+"/* 点击和按下 */\n"
+"QToolButton:pressed,QToolButton:checked{\n"
+"    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
+"    background-color: rgb(246, 246, 246);   \n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../resources/icon/监控.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("./resources/icon/监控.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SystemInfo.setIcon(icon2)
         self.SystemInfo.setCheckable(True)
         self.SystemInfo.setAutoExclusive(True)
@@ -207,32 +205,32 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.Key.sizePolicy().hasHeightForWidth())
         self.Key.setSizePolicy(sizePolicy)
         self.Key.setStyleSheet("/* 默认 */\n"
-                               "QToolButton{   \n"
-                               "    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
-                               "    border-bottom: 7px outset transparent;\n"
-                               "    border-right: 3px outset transparent;\n"
-                               "    border-left: 3px outset transparent;\n"
-                               "    min-width: 80px;                            /* 控件最小宽度 */\n"
-                               "    min-height: 40px;\n"
-                               "    background-color: rgb(228, 228, 228);\n"
-                               "}\n"
-                               "\n"
-                               "/* 鼠标悬停 */\n"
-                               "QToolButton:hover{\n"
-                               "    background-color: rgb(205, 205, 205);\n"
-                               "}\n"
-                               "\n"
-                               "/* 点击和按下 */\n"
-                               "QToolButton:pressed,QToolButton:checked{\n"
-                               "    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
-                               "    background-color: rgb(246, 246, 246);   \n"
-                               "}\n"
-                               "\n"
-                               "QPushButton:default {\n"
-                               "    border-color: navy; /* make the default button prominent */\n"
-                               "}")
+"QToolButton{   \n"
+"    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
+"    border-bottom: 7px outset transparent;\n"
+"    border-right: 3px outset transparent;\n"
+"    border-left: 3px outset transparent;\n"
+"    min-width: 80px;                            /* 控件最小宽度 */\n"
+"    min-height: 40px;\n"
+"    background-color: rgb(228, 228, 228);\n"
+"}\n"
+"\n"
+"/* 鼠标悬停 */\n"
+"QToolButton:hover{\n"
+"    background-color: rgb(205, 205, 205);\n"
+"}\n"
+"\n"
+"/* 点击和按下 */\n"
+"QToolButton:pressed,QToolButton:checked{\n"
+"    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
+"    background-color: rgb(246, 246, 246);   \n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../resources/icon/权限.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("./resources/icon/权限.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Key.setIcon(icon3)
         self.Key.setCheckable(True)
         self.Key.setAutoExclusive(True)
@@ -248,53 +246,53 @@ class Ui_MainWindow(object):
         self.AI.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.AI.setAutoFillBackground(False)
         self.AI.setStyleSheet("/* 默认 */\n"
-                              "QToolButton{   \n"
-                              "    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
-                              "    border-bottom: 7px outset transparent;\n"
-                              "    border-right: 3px outset transparent;\n"
-                              "    border-left: 3px outset transparent;\n"
-                              "    min-width: 80px;                            /* 控件最小宽度 */\n"
-                              "    min-height: 40px;\n"
-                              "    background-color: rgb(228, 228, 228);\n"
-                              "}\n"
-                              "\n"
-                              "/* 鼠标悬停 */\n"
-                              "QToolButton:hover{\n"
-                              "    background-color: rgb(205, 205, 205);\n"
-                              "}\n"
-                              "\n"
-                              "/* 点击和按下 */\n"
-                              "QToolButton:pressed,QToolButton:checked{\n"
-                              "    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
-                              "    background-color: rgb(246, 246, 246);   \n"
-                              "}\n"
-                              "\n"
-                              "QPushButton:default {\n"
-                              "    border-color: navy; /* make the default button prominent */\n"
-                              "}")
+"QToolButton{   \n"
+"    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
+"    border-bottom: 7px outset transparent;\n"
+"    border-right: 3px outset transparent;\n"
+"    border-left: 3px outset transparent;\n"
+"    min-width: 80px;                            /* 控件最小宽度 */\n"
+"    min-height: 40px;\n"
+"    background-color: rgb(228, 228, 228);\n"
+"}\n"
+"\n"
+"/* 鼠标悬停 */\n"
+"QToolButton:hover{\n"
+"    background-color: rgb(205, 205, 205);\n"
+"}\n"
+"\n"
+"/* 点击和按下 */\n"
+"QToolButton:pressed,QToolButton:checked{\n"
+"    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
+"    background-color: rgb(246, 246, 246);   \n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../resources/icon/aislogo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("./resources/icon/aislogo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.AI.setIcon(icon4)
         self.AI.setCheckable(True)
         self.AI.setAutoExclusive(True)
         self.AI.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.AI.setObjectName("AI")
         self.gridLayout.addWidget(self.AI, 2, 0, 1, 1)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem, 5, 0, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem4, 5, 0, 1, 1)
         self.verticalLayout_2.addWidget(self.ToolbarWidget)
         self.horizontalLayout_4.addWidget(self.ToolbarFrame)
         self.frame_7 = QtWidgets.QFrame(self.WorkSpaceFrame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(4)
+        sizePolicy.setHorizontalStretch(9)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
         self.frame_7.setSizePolicy(sizePolicy)
         self.frame_7.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                   "\n"
-                                   "\n"
-                                   "border-top-right-radius: 20px;\n"
-                                   "border-bottom-right-radius: 20px;")
+"\n"
+"\n"
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
@@ -309,17 +307,17 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
         self.stackedWidget.setSizePolicy(sizePolicy)
         self.stackedWidget.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                         "\n"
-                                         "\n"
-                                         "border-top-right-radius: 20px;\n"
-                                         "border-bottom-right-radius: 20px;")
+"\n"
+"\n"
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-                                "\n"
-                                "\n"
-                                "border-top-right-radius: 20px;\n"
-                                "border-bottom-right-radius: 20px;")
+"\n"
+"\n"
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.page.setObjectName("page")
         self.label = QtWidgets.QLabel(self.page)
         self.label.setGeometry(QtCore.QRect(20, 10, 72, 15))
@@ -344,27 +342,16 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(0)
-        self.logout.clicked.connect(MainWindow.close)  # type: ignore
+        self.logout.clicked.connect(MainWindow.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.user.setText(_translate("MainWindow", "Leon"))
-        self.logout.setText(_translate("MainWindow", "Logout"))
         self.SystemInfo.setText(_translate("MainWindow", "    系统监控"))
         self.Key.setText(_translate("MainWindow", "    权限设置"))
         self.AI.setText(_translate("MainWindow", "    智能算法"))
         self.label.setText(_translate("MainWindow", "page 1"))
         self.label_2.setText(_translate("MainWindow", "page 2"))
         self.label_3.setText(_translate("MainWindow", "page 3"))
-
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = Ui_MainWindow()
-#     ui.setupUi(MainWindow)
-#     MainWindow.show()
-#     sys.exit(app.exec_())

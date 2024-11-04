@@ -3,21 +3,25 @@ import sys
 from PyQt5.QtCore import Qt, QPoint, QEvent
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from view.login import *
+from view.login_v2 import *
 from view.main_window import *
 from PyQt5 import QtCore
 class LoginWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.ui = Ui_Form()
+        # self.ui = Ui_Form()
+        self.ui = Ui_Login_v2()
         self.ui.setupUi(self)
 
-        # self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        # self.shadow = QtWidgets.QGraphicsDropShadowEffect(self)
-        # self.shadow.setOffset(5, 5)
-        # self.shadow.setBlurRadius(10)
-        # self.shadow.setColor(QtCore.Qt.black)
-        # self.ui.frame.setGraphicsEffect(self.shadow)
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        self.shadow.setOffset(5, 5)
+        self.shadow.setBlurRadius(10)
+        self.shadow.setColor(QtCore.Qt.black)
+        self.ui.left_login_window.setGraphicsEffect(self.shadow)
+
+
         self.ui.loginBtn.clicked.connect(self.login)
         self.ui.resetBtn.clicked.connect(self.reset)
 
@@ -99,6 +103,7 @@ class MainWindow(QMainWindow):
 
 
         self.show()
+
 
 
 if __name__ == '__main__':
