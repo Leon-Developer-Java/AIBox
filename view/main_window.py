@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
         self.MainFrame.setObjectName("MainFrame")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.MainFrame)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setSpacing(5)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.TopFrame = QtWidgets.QFrame(self.MainFrame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
@@ -39,12 +39,13 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 255, 255);\n"
 "border-top-left-radius:20px;\n"
 "border-top-right-radius:20px;\n"
-"border-bottom-left-radius: 20px;\n"
-"border-bottom-right-radius: 20px;\n"
+"border-bottom-left-radius: 0px;\n"
+"border-bottom-right-radius: 0px;\n"
 "}\n"
 "")
         self.TopFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.TopFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.TopFrame.setLineWidth(0)
         self.TopFrame.setObjectName("TopFrame")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.TopFrame)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -141,9 +142,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.ToolbarFrame.sizePolicy().hasHeightForWidth())
         self.ToolbarFrame.setSizePolicy(sizePolicy)
         self.ToolbarFrame.setStyleSheet("#ToolbarFrame{\n"
-"background-color: rgb(228, 228, 228);\n"
+"background-color: rgb(93, 93, 103);\n"
 "qproperty-alignment: \'AlignCenter\';\n"
-" border-top-left-radius: 20px;       /* 左上角圆角 */\n"
+" border-top-left-radius: 0px;       /* 左上角圆角 */\n"
 "                border-top-right-radius: 0px;       /* 右上角圆角 */\n"
 "                border-bottom-right-radius: 0px;    /* 右下角圆角 */\n"
 "                border-bottom-left-radius: 20px;     /* 左下角圆角 */ \n"
@@ -152,35 +153,23 @@ class Ui_MainWindow(object):
 "")
         self.ToolbarFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.ToolbarFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ToolbarFrame.setLineWidth(0)
         self.ToolbarFrame.setObjectName("ToolbarFrame")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.ToolbarFrame)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.ToolbarWidget = QtWidgets.QWidget(self.ToolbarFrame)
-        self.ToolbarWidget.setStyleSheet("")
-        self.ToolbarWidget.setObjectName("ToolbarWidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.ToolbarWidget)
-        self.gridLayout.setContentsMargins(0, 10, 0, 0)
-        self.gridLayout.setSpacing(0)
-        self.gridLayout.setObjectName("gridLayout")
-        spacerItem4 = QtWidgets.QSpacerItem(20, 60, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem4, 7, 0, 1, 1)
-        self.Key = QtWidgets.QToolButton(self.ToolbarWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Key.sizePolicy().hasHeightForWidth())
-        self.Key.setSizePolicy(sizePolicy)
-        self.Key.setStyleSheet("/* 默认 */\n"
+        self.ToolbarWidget.setStyleSheet("/* 默认 */\n"
 "QToolButton{   \n"
+"color:rgb(255, 255, 255);   \n"
 "    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
 "    border-bottom: 7px outset transparent;\n"
 "    border-right: 3px outset transparent;\n"
 "    border-left: 3px outset transparent;\n"
 "    min-width: 80px;                            /* 控件最小宽度 */\n"
 "    min-height: 40px;\n"
-"    background-color: rgb(228, 228, 228);\n"
+"    background-color: rgb(93, 93, 103);\n"
 "}\n"
 "\n"
 "/* 鼠标悬停 */\n"
@@ -191,12 +180,27 @@ class Ui_MainWindow(object):
 "/* 点击和按下 */\n"
 "QToolButton:pressed,QToolButton:checked{\n"
 "    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
-"    background-color: rgb(246, 246, 246);   \n"
-"}\n"
-"\n"
+"    background-color: rgb(242, 241, 246);  \n"
+"color:rgb(0, 0, 0);    \n"
+"}  \n"
 "QPushButton:default {\n"
 "    border-color: navy; /* make the default button prominent */\n"
+"    \n"
 "}")
+        self.ToolbarWidget.setObjectName("ToolbarWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.ToolbarWidget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName("gridLayout")
+        spacerItem4 = QtWidgets.QSpacerItem(20, 60, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem4, 7, 0, 1, 1)
+        self.Key = QtWidgets.QToolButton(self.ToolbarWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.Key.sizePolicy().hasHeightForWidth())
+        self.Key.setSizePolicy(sizePolicy)
+        self.Key.setStyleSheet("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("./resources/icon/权限.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Key.setIcon(icon2)
@@ -213,31 +217,7 @@ class Ui_MainWindow(object):
         self.AI.setSizePolicy(sizePolicy)
         self.AI.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.AI.setAutoFillBackground(False)
-        self.AI.setStyleSheet("/* 默认 */\n"
-"QToolButton{   \n"
-"    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
-"    border-bottom: 7px outset transparent;\n"
-"    border-right: 3px outset transparent;\n"
-"    border-left: 3px outset transparent;\n"
-"    min-width: 80px;                            /* 控件最小宽度 */\n"
-"    min-height: 40px;\n"
-"    background-color: rgb(228, 228, 228);\n"
-"}\n"
-"\n"
-"/* 鼠标悬停 */\n"
-"QToolButton:hover{\n"
-"    background-color: rgb(205, 205, 205);\n"
-"}\n"
-"\n"
-"/* 点击和按下 */\n"
-"QToolButton:pressed,QToolButton:checked{\n"
-"    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
-"    background-color: rgb(255, 255, 255);   \n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}")
+        self.AI.setStyleSheet("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("./resources/icon/aislogo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.AI.setIcon(icon3)
@@ -246,7 +226,7 @@ class Ui_MainWindow(object):
         self.AI.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.AI.setObjectName("AI")
         self.gridLayout.addWidget(self.AI, 3, 0, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(15, 25, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        spacerItem5 = QtWidgets.QSpacerItem(15, 15, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         self.gridLayout.addItem(spacerItem5, 0, 0, 1, 1)
         self.SystemInfo = QtWidgets.QToolButton(self.ToolbarWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
@@ -255,32 +235,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.SystemInfo.sizePolicy().hasHeightForWidth())
         self.SystemInfo.setSizePolicy(sizePolicy)
         self.SystemInfo.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.SystemInfo.setStyleSheet("/* 默认 */\n"
-"QToolButton{   \n"
-"    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */\n"
-"    border-bottom: 7px outset transparent;\n"
-"    border-right: 3px outset transparent;\n"
-"    border-left: 3px outset transparent;                 \n"
-"    background-color: rgb(228, 228, 228);\n"
-"    min-width: 80px;\n"
-"    min-height: 40px;\n"
-"     \n"
-"}\n"
-"\n"
-"/* 鼠标悬停 */\n"
-"QToolButton:hover{\n"
-"    background-color: rgb(205, 205, 205);\n"
-"}\n"
-"\n"
-"/* 点击和按下 */\n"
-"QToolButton:pressed,QToolButton:checked{\n"
-"    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */\n"
-"    background-color: rgb(255, 255, 255);   \n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}")
+        self.SystemInfo.setStyleSheet("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("./resources/icon/监控.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SystemInfo.setIcon(icon4)
@@ -298,9 +253,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
         self.frame_7.setSizePolicy(sizePolicy)
         self.frame_7.setStyleSheet("#frame_7{\n"
-"background-color: rgb(255, 255, 255);\n"
+"background-color: rgb(242, 241, 246);\n"
 "border-top-left-radius: 0px;\n"
-"border-top-right-radius: 20px;\n"
+"border-top-right-radius: 0px;\n"
 "border-bottom-right-radius: 20px;\n"
 "border-bottom-left-radius: 0px;\n"
 "}\n"
@@ -311,8 +266,8 @@ class Ui_MainWindow(object):
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_7)
-        self.gridLayout_2.setContentsMargins(5, 5, 5, 5)
-        self.gridLayout_2.setSpacing(5)
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.stackedWidget = QtWidgets.QStackedWidget(self.frame_7)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -321,6 +276,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
         self.stackedWidget.setSizePolicy(sizePolicy)
         self.stackedWidget.setStyleSheet("")
+        self.stackedWidget.setLineWidth(0)
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setStyleSheet("")
@@ -340,9 +296,39 @@ class Ui_MainWindow(object):
         self.innerTop.setFrameShadow(QtWidgets.QFrame.Raised)
         self.innerTop.setObjectName("innerTop")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.innerTop)
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_6.setSpacing(0)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         spacerItem6 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem6)
+        self.combo_box_frame_2 = QtWidgets.QFrame(self.innerTop)
+        self.combo_box_frame_2.setMinimumSize(QtCore.QSize(50, 0))
+        self.combo_box_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.combo_box_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.combo_box_frame_2.setObjectName("combo_box_frame_2")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.combo_box_frame_2)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.label = QtWidgets.QLabel(self.combo_box_frame_2)
+        font = QtGui.QFont()
+        font.setFamily("黑体")
+        font.setPointSize(12)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.horizontalLayout_7.addWidget(self.label)
+        self.comboBox = QtWidgets.QComboBox(self.combo_box_frame_2)
+        font = QtGui.QFont()
+        font.setFamily("Candara")
+        font.setPointSize(12)
+        self.comboBox.setFont(font)
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.horizontalLayout_7.addWidget(self.comboBox)
+        self.horizontalLayout_6.addWidget(self.combo_box_frame_2)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem7)
         self.openFile = QtWidgets.QToolButton(self.innerTop)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -360,8 +346,8 @@ class Ui_MainWindow(object):
         self.openFile.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.openFile.setObjectName("openFile")
         self.horizontalLayout_6.addWidget(self.openFile)
-        spacerItem7 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem7)
+        spacerItem8 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem8)
         self.start = QtWidgets.QToolButton(self.innerTop)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -379,8 +365,8 @@ class Ui_MainWindow(object):
         self.start.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.start.setObjectName("start")
         self.horizontalLayout_6.addWidget(self.start)
-        spacerItem8 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem8)
+        spacerItem9 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem9)
         self.stop = QtWidgets.QToolButton(self.innerTop)
         self.stop.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
@@ -399,8 +385,8 @@ class Ui_MainWindow(object):
         self.stop.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.stop.setObjectName("stop")
         self.horizontalLayout_6.addWidget(self.stop)
-        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem9)
+        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem10)
         self.verticalLayout_3.addWidget(self.innerTop)
         self.innerMid = QtWidgets.QFrame(self.page)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
@@ -415,8 +401,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        spacerItem10 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem10)
+        spacerItem11 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem11)
         self.frame = QtWidgets.QFrame(self.innerMid)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -441,8 +427,8 @@ class Ui_MainWindow(object):
         self.origin_image.setObjectName("origin_image")
         self.verticalLayout_5.addWidget(self.origin_image)
         self.horizontalLayout_5.addWidget(self.frame)
-        spacerItem11 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem11)
+        spacerItem12 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem12)
         self.frame_2 = QtWidgets.QFrame(self.innerMid)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -467,8 +453,8 @@ class Ui_MainWindow(object):
         self.processed_image.setObjectName("processed_image")
         self.verticalLayout_4.addWidget(self.processed_image)
         self.horizontalLayout_5.addWidget(self.frame_2)
-        spacerItem12 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem12)
+        spacerItem13 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem13)
         self.verticalLayout_3.addWidget(self.innerMid)
         self.innerBottom = QtWidgets.QFrame(self.page)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
@@ -492,17 +478,14 @@ class Ui_MainWindow(object):
         self.image_listView.setSizePolicy(sizePolicy)
         self.image_listView.setObjectName("image_listView")
         self.gridLayout_3.addWidget(self.image_listView, 0, 1, 1, 1)
-        spacerItem13 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem13, 0, 0, 1, 1)
         spacerItem14 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem14, 0, 2, 1, 1)
+        self.gridLayout_3.addItem(spacerItem14, 0, 0, 1, 1)
+        spacerItem15 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem15, 0, 2, 1, 1)
         self.verticalLayout_3.addWidget(self.innerBottom)
         self.stackedWidget.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
-        self.label_2 = QtWidgets.QLabel(self.page_2)
-        self.label_2.setGeometry(QtCore.QRect(10, 10, 72, 15))
-        self.label_2.setObjectName("label_2")
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
@@ -524,13 +507,16 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.user.setText(_translate("MainWindow", "Leon"))
-        self.Key.setText(_translate("MainWindow", "权限设置"))
+        self.Key.setText(_translate("MainWindow", "权限管理"))
         self.AI.setText(_translate("MainWindow", "智能算法"))
         self.SystemInfo.setText(_translate("MainWindow", "系统监控"))
+        self.label.setText(_translate("MainWindow", "Select Model:"))
+        self.comboBox.setItemText(0, _translate("MainWindow", "PromptAD"))
+        self.comboBox.setItemText(1, _translate("MainWindow", "EfficientAD"))
+        self.comboBox.setItemText(2, _translate("MainWindow", "ResNet-51"))
         self.openFile.setText(_translate("MainWindow", "open"))
         self.start.setText(_translate("MainWindow", "start"))
         self.stop.setText(_translate("MainWindow", "stop"))
         self.label_Origin.setText(_translate("MainWindow", "Origin:"))
         self.label_processed.setText(_translate("MainWindow", "Processed:"))
-        self.label_2.setText(_translate("MainWindow", "page 2"))
         self.label_3.setText(_translate("MainWindow", "page 3"))

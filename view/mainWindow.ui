@@ -43,7 +43,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <property name="spacing">
-      <number>5</number>
+      <number>0</number>
      </property>
      <property name="leftMargin">
       <number>0</number>
@@ -70,8 +70,8 @@
 background-color: rgb(255, 255, 255);
 border-top-left-radius:20px;
 border-top-right-radius:20px;
-border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
 }
 </string>
        </property>
@@ -80,6 +80,9 @@ border-bottom-right-radius: 20px;
        </property>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>0</number>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
@@ -332,9 +335,9 @@ QPushButton:hover{
           </property>
           <property name="styleSheet">
            <string notr="true">#ToolbarFrame{
-background-color: rgb(228, 228, 228);
+background-color: rgb(93, 93, 103);
 qproperty-alignment: 'AlignCenter';
- border-top-left-radius: 20px;       /* 左上角圆角 */
+ border-top-left-radius: 0px;       /* 左上角圆角 */
                 border-top-right-radius: 0px;       /* 右上角圆角 */
                 border-bottom-right-radius: 0px;    /* 右下角圆角 */
                 border-bottom-left-radius: 20px;     /* 左下角圆角 */ 
@@ -347,6 +350,9 @@ qproperty-alignment: 'AlignCenter';
           </property>
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <property name="spacing">
@@ -367,14 +373,40 @@ qproperty-alignment: 'AlignCenter';
            <item>
             <widget class="QWidget" name="ToolbarWidget" native="true">
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">/* 默认 */
+QToolButton{   
+color:rgb(255, 255, 255);   
+    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */
+    border-bottom: 7px outset transparent;
+    border-right: 3px outset transparent;
+    border-left: 3px outset transparent;
+    min-width: 80px;                            /* 控件最小宽度 */
+    min-height: 40px;
+    background-color: rgb(93, 93, 103);
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+    background-color: rgb(205, 205, 205);
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+    background-color: rgb(242, 241, 246);  
+color:rgb(0, 0, 0);    
+}  
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+	
+}</string>
              </property>
              <layout class="QGridLayout" name="gridLayout">
               <property name="leftMargin">
                <number>0</number>
               </property>
               <property name="topMargin">
-               <number>10</number>
+               <number>0</number>
               </property>
               <property name="rightMargin">
                <number>0</number>
@@ -410,34 +442,10 @@ qproperty-alignment: 'AlignCenter';
                  </sizepolicy>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">/* 默认 */
-QToolButton{   
-    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */
-    border-bottom: 7px outset transparent;
-    border-right: 3px outset transparent;
-    border-left: 3px outset transparent;
-    min-width: 80px;                            /* 控件最小宽度 */
-    min-height: 40px;
-    background-color: rgb(228, 228, 228);
-}
-
-/* 鼠标悬停 */
-QToolButton:hover{
-    background-color: rgb(205, 205, 205);
-}
-
-/* 点击和按下 */
-QToolButton:pressed,QToolButton:checked{
-    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
-    background-color: rgb(246, 246, 246);   
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}</string>
+                 <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string>权限设置</string>
+                 <string>权限管理</string>
                 </property>
                 <property name="icon">
                  <iconset>
@@ -469,31 +477,7 @@ QPushButton:default {
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">/* 默认 */
-QToolButton{   
-    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */
-    border-bottom: 7px outset transparent;
-    border-right: 3px outset transparent;
-    border-left: 3px outset transparent;
-    min-width: 80px;                            /* 控件最小宽度 */
-    min-height: 40px;
-    background-color: rgb(228, 228, 228);
-}
-
-/* 鼠标悬停 */
-QToolButton:hover{
-    background-color: rgb(205, 205, 205);
-}
-
-/* 点击和按下 */
-QToolButton:pressed,QToolButton:checked{
-    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
-    background-color: rgb(255, 255, 255);   
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}</string>
+                 <string notr="true"/>
                 </property>
                 <property name="text">
                  <string>智能算法</string>
@@ -524,7 +508,7 @@ QPushButton:default {
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>15</width>
-                  <height>25</height>
+                  <height>15</height>
                  </size>
                 </property>
                </spacer>
@@ -541,32 +525,7 @@ QPushButton:default {
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">/* 默认 */
-QToolButton{   
-    border-top: 3px outset transparent;           /* 上边框宽度3像素、突出显示、颜色为透明 */
-    border-bottom: 7px outset transparent;
-    border-right: 3px outset transparent;
-    border-left: 3px outset transparent;                 
-    background-color: rgb(228, 228, 228);
-	min-width: 80px;
-    min-height: 40px;
-	 
-}
-
-/* 鼠标悬停 */
-QToolButton:hover{
-    background-color: rgb(205, 205, 205);
-}
-
-/* 点击和按下 */
-QToolButton:pressed,QToolButton:checked{
-    border-left: 3px outset rgb(93, 95, 97);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
-    background-color: rgb(255, 255, 255);   
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}</string>
+                 <string notr="true"/>
                 </property>
                 <property name="text">
                  <string>系统监控</string>
@@ -602,9 +561,9 @@ QPushButton:default {
           </property>
           <property name="styleSheet">
            <string notr="true">#frame_7{
-background-color: rgb(255, 255, 255);
+background-color: rgb(242, 241, 246);
 border-top-left-radius: 0px;
-border-top-right-radius: 20px;
+border-top-right-radius: 0px;
 border-bottom-right-radius: 20px;
 border-bottom-left-radius: 0px;
 }
@@ -620,19 +579,19 @@ border-bottom-left-radius: 0px;
           </property>
           <layout class="QGridLayout" name="gridLayout_2" rowstretch="0" columnstretch="0">
            <property name="leftMargin">
-            <number>5</number>
+            <number>0</number>
            </property>
            <property name="topMargin">
-            <number>5</number>
+            <number>0</number>
            </property>
            <property name="rightMargin">
-            <number>5</number>
+            <number>0</number>
            </property>
            <property name="bottomMargin">
-            <number>5</number>
+            <number>0</number>
            </property>
            <property name="spacing">
-            <number>5</number>
+            <number>0</number>
            </property>
            <item row="0" column="0">
             <widget class="QStackedWidget" name="stackedWidget">
@@ -644,6 +603,9 @@ border-bottom-left-radius: 0px;
              </property>
              <property name="styleSheet">
               <string notr="true"/>
+             </property>
+             <property name="lineWidth">
+              <number>0</number>
              </property>
              <property name="currentIndex">
               <number>0</number>
@@ -673,6 +635,21 @@ border-bottom-left-radius: 0px;
                   <enum>QFrame::Raised</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
                   <item>
                    <spacer name="button_spacer_4">
                     <property name="orientation">
@@ -684,6 +661,90 @@ border-bottom-left-radius: 0px;
                     <property name="sizeHint" stdset="0">
                      <size>
                       <width>30</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="combo_box_frame_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label">
+                       <property name="font">
+                        <font>
+                         <family>黑体</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Select Model:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox">
+                       <property name="font">
+                        <font>
+                         <family>Candara</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>PromptAD</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>EfficientAD</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>ResNet-51</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="combo_box_spacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Preferred</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
                       <height>20</height>
                      </size>
                     </property>
@@ -1122,21 +1183,7 @@ border-bottom-left-radius: 0px;
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="page_2">
-              <widget class="QLabel" name="label_2">
-               <property name="geometry">
-                <rect>
-                 <x>10</x>
-                 <y>10</y>
-                 <width>72</width>
-                 <height>15</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>page 2</string>
-               </property>
-              </widget>
-             </widget>
+             <widget class="QWidget" name="page_2"/>
              <widget class="QWidget" name="page_3">
               <widget class="QLabel" name="label_3">
                <property name="geometry">
