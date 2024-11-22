@@ -194,20 +194,20 @@ class MainWindow(QMainWindow):
         # 添加toolbutton点击事件，打开文件夹、开始运行、停止运行按钮
         self.ui.openFile.clicked.connect(self.open_images)
 
-        self.ui.image_listView.setViewMode(QListView.IconMode)
-        self.ui.image_listView.setIconSize(QSize(100, 100))
-        self.ui.image_listView.setSpacing(10)
-
-        # 设置水平滚动条
-        self.ui.image_listView.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.ui.image_listView.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-
-        # 强制单行显示
-        self.ui.image_listView.setWrapping(False)  # 禁止自动换行
-        self.ui.image_listView.setFlow(QListView.LeftToRight)  # 从左到右显示项目
-
-        self.model = QStandardItemModel(self.ui.image_listView)
-        self.ui.image_listView.setModel(self.model)
+        # self.ui.image_listView.setViewMode(QListView.IconMode)
+        # self.ui.image_listView.setIconSize(QSize(100, 100))
+        # self.ui.image_listView.setSpacing(10)
+        #
+        # # 设置水平滚动条
+        # self.ui.image_listView.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        # self.ui.image_listView.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        #
+        # # 强制单行显示
+        # self.ui.image_listView.setWrapping(False)  # 禁止自动换行
+        # self.ui.image_listView.setFlow(QListView.LeftToRight)  # 从左到右显示项目
+        #
+        # self.model = QStandardItemModel(self.ui.image_listView)
+        # self.ui.image_listView.setModel(self.model)
 
         self.show()
 

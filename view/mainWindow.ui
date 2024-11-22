@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1608</width>
-    <height>867</height>
+    <width>1595</width>
+    <height>858</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,8 +22,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>1591</width>
-      <height>851</height>
+      <width>1581</width>
+      <height>841</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -68,8 +68,8 @@
        <property name="styleSheet">
         <string notr="true">#TopFrame{
 background-color: rgb(255, 255, 255);
-border-top-left-radius:20px;
-border-top-right-radius:20px;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
 }
@@ -139,28 +139,67 @@ border-bottom-right-radius: 0px;
               <enum>Qt::Horizontal</enum>
              </property>
              <property name="sizeType">
-              <enum>QSizePolicy::Preferred</enum>
+              <enum>QSizePolicy::Fixed</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>30</width>
+               <width>20</width>
                <height>20</height>
               </size>
              </property>
             </spacer>
            </item>
-           <item alignment="Qt::AlignLeft">
-            <widget class="QPushButton" name="user">
-             <property name="styleSheet">
-              <string notr="true">border:none;
-font: 12pt &quot;方正姚体&quot;;</string>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="maximumSize">
+              <size>
+               <width>196</width>
+               <height>60</height>
+              </size>
              </property>
              <property name="text">
-              <string>Leon</string>
+              <string/>
              </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>../resources/icon/chips.png</normaloff>../resources/icon/chips.png</iconset>
+             <property name="pixmap">
+              <pixmap>../resources/image/chd.edu.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>隶书</family>
+               <pointsize>18</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>信 息 工 程 学 院</string>
              </property>
             </widget>
            </item>
@@ -340,7 +379,7 @@ qproperty-alignment: 'AlignCenter';
  border-top-left-radius: 0px;       /* 左上角圆角 */
                 border-top-right-radius: 0px;       /* 右上角圆角 */
                 border-bottom-right-radius: 0px;    /* 右下角圆角 */
-                border-bottom-left-radius: 20px;     /* 左下角圆角 */ 
+                border-bottom-left-radius: 5px;     /* 左下角圆角 */ 
 }
 	
 </string>
@@ -445,7 +484,7 @@ QPushButton:default {
                  <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string>权限管理</string>
+                 <string> 权限管理</string>
                 </property>
                 <property name="icon">
                  <iconset>
@@ -480,11 +519,11 @@ QPushButton:default {
                  <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string>智能算法</string>
+                 <string> 图像处理</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../resources/icon/aislogo.png</normaloff>../resources/icon/aislogo.png</iconset>
+                  <normaloff>../resources/icon/图像处理器.png</normaloff>../resources/icon/图像处理器.png</iconset>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
@@ -528,7 +567,7 @@ QPushButton:default {
                  <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string>系统监控</string>
+                 <string> 系统监控</string>
                 </property>
                 <property name="icon">
                  <iconset>
@@ -564,7 +603,7 @@ QPushButton:default {
 background-color: rgb(242, 241, 246);
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
-border-bottom-right-radius: 20px;
+border-bottom-right-radius: 5px;
 border-bottom-left-radius: 0px;
 }
 
@@ -601,6 +640,9 @@ border-bottom-left-radius: 0px;
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="toolTipDuration">
+              <number>0</number>
+             </property>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
@@ -636,7 +678,7 @@ border-bottom-left-radius: 0px;
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_6">
                   <property name="spacing">
-                   <number>0</number>
+                   <number>10</number>
                   </property>
                   <property name="leftMargin">
                    <number>0</number>
@@ -651,28 +693,15 @@ border-bottom-left-radius: 0px;
                    <number>0</number>
                   </property>
                   <item>
-                   <spacer name="button_spacer_4">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>30</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="combo_box_frame_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>0</height>
-                     </size>
+                   <widget class="QFrame" name="button_tools">
+                    <property name="styleSheet">
+                     <string notr="true">#button_tools{
+background-color: rgb(255, 255, 255);
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}</string>
                     </property>
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
@@ -680,236 +709,299 @@ border-bottom-left-radius: 0px;
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
                      <property name="leftMargin">
-                      <number>0</number>
+                      <number>9</number>
                      </property>
                      <property name="topMargin">
-                      <number>0</number>
+                      <number>9</number>
                      </property>
                      <property name="rightMargin">
-                      <number>0</number>
+                      <number>9</number>
                      </property>
                      <property name="bottomMargin">
-                      <number>0</number>
+                      <number>9</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label">
-                       <property name="font">
-                        <font>
-                         <family>黑体</family>
-                         <pointsize>12</pointsize>
-                        </font>
+                      <widget class="QToolButton" name="openFile">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>63</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="autoFillBackground">
+                        <bool>false</bool>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
                        </property>
                        <property name="text">
-                        <string>Select Model:</string>
+                        <string>打开图像</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>../resources/icon/文件夹.png</normaloff>../resources/icon/文件夹.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="toolButtonStyle">
+                        <enum>Qt::ToolButtonTextUnderIcon</enum>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QComboBox" name="comboBox">
-                       <property name="font">
-                        <font>
-                         <family>Candara</family>
-                         <pointsize>12</pointsize>
-                        </font>
+                      <widget class="QToolButton" name="start_reg">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
-                       <item>
-                        <property name="text">
-                         <string>PromptAD</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>EfficientAD</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>ResNet-51</string>
-                        </property>
-                       </item>
+                       <property name="minimumSize">
+                        <size>
+                         <width>63</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="autoFillBackground">
+                        <bool>false</bool>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>开始识别</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>../resources/icon/图像识别.png</normaloff>../resources/icon/图像识别.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="toolButtonStyle">
+                        <enum>Qt::ToolButtonTextUnderIcon</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QToolButton" name="output_word">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>63</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="autoFillBackground">
+                        <bool>false</bool>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>导出报告</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>../resources/icon/Word.png</normaloff>../resources/icon/Word.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="toolButtonStyle">
+                        <enum>Qt::ToolButtonTextUnderIcon</enum>
+                       </property>
                       </widget>
                      </item>
                     </layout>
                    </widget>
                   </item>
                   <item>
-                   <spacer name="combo_box_spacer">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QToolButton" name="openFile">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>63</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="autoFillBackground">
-                     <bool>false</bool>
-                    </property>
+                   <widget class="QFrame" name="radio_box">
                     <property name="styleSheet">
-                     <string notr="true"/>
+                     <string notr="true">#radio_box{
+background-color: rgb(255, 255, 255);
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}</string>
                     </property>
-                    <property name="text">
-                     <string>open</string>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
                     </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>../resources/icon/文件夹.png</normaloff>../resources/icon/文件夹.png</iconset>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
                     </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>30</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="toolButtonStyle">
-                     <enum>Qt::ToolButtonTextUnderIcon</enum>
-                    </property>
+                    <layout class="QGridLayout" name="gridLayout_3">
+                     <item row="1" column="7">
+                      <widget class="QRadioButton" name="channel_15">
+                       <property name="text">
+                        <string>15</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QRadioButton" name="channel_2">
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="3">
+                      <widget class="QRadioButton" name="channel_11">
+                       <property name="text">
+                        <string>11</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QRadioButton" name="channel_3">
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="4">
+                      <widget class="QRadioButton" name="channel_4">
+                       <property name="text">
+                        <string>4</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="7">
+                      <widget class="QRadioButton" name="channel_7">
+                       <property name="text">
+                        <string>7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QRadioButton" name="channel_1">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="6">
+                      <widget class="QRadioButton" name="channel_14">
+                       <property name="text">
+                        <string>14</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QRadioButton" name="channel_9">
+                       <property name="text">
+                        <string>9</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="5">
+                      <widget class="QRadioButton" name="channel_13">
+                       <property name="text">
+                        <string>13</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="8">
+                      <widget class="QRadioButton" name="channel_16">
+                       <property name="text">
+                        <string>16</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="6">
+                      <widget class="QRadioButton" name="channel_6">
+                       <property name="text">
+                        <string>6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="4">
+                      <widget class="QRadioButton" name="channel_12">
+                       <property name="text">
+                        <string>12</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="5">
+                      <widget class="QRadioButton" name="channel_5">
+                       <property name="text">
+                        <string>5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QRadioButton" name="channel_10">
+                       <property name="text">
+                        <string>10</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="8">
+                      <widget class="QRadioButton" name="channel_8">
+                       <property name="text">
+                        <string>8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label">
+                       <property name="text">
+                        <string>切换通道:</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                   <item>
-                   <spacer name="button_spacer_2">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>10</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QToolButton" name="start">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>63</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="autoFillBackground">
-                     <bool>false</bool>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true"/>
-                    </property>
-                    <property name="text">
-                     <string>start</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>../resources/icon/开始.png</normaloff>../resources/icon/开始.png</iconset>
-                    </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>30</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="toolButtonStyle">
-                     <enum>Qt::ToolButtonTextUnderIcon</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="button_spacer_3">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>10</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QToolButton" name="stop">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>63</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="autoFillBackground">
-                     <bool>false</bool>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true"/>
-                    </property>
-                    <property name="text">
-                     <string>stop</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>../resources/icon/暂停.png</normaloff>../resources/icon/暂停.png</iconset>
-                    </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>30</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="toolButtonStyle">
-                     <enum>Qt::ToolButtonTextUnderIcon</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="button_spacer_1">
+                   <spacer name="horizontalSpacer_5">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
                     </property>
@@ -938,7 +1030,7 @@ border-bottom-left-radius: 0px;
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -955,23 +1047,7 @@ border-bottom-left-radius: 0px;
                    <number>0</number>
                   </property>
                   <item>
-                   <spacer name="horizontalSpacer_8">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>30</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame">
+                   <widget class="QFrame" name="frame_2">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -984,7 +1060,7 @@ border-bottom-left-radius: 0px;
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <layout class="QVBoxLayout" name="verticalLayout_4">
                      <property name="spacing">
                       <number>9</number>
                      </property>
@@ -1020,23 +1096,7 @@ border-bottom-left-radius: 0px;
                    </widget>
                   </item>
                   <item>
-                   <spacer name="horizontalSpacer_7">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_2">
+                   <widget class="QFrame" name="frame">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1049,7 +1109,7 @@ border-bottom-left-radius: 0px;
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_4">
+                    <layout class="QVBoxLayout" name="verticalLayout_5">
                      <property name="spacing">
                       <number>9</number>
                      </property>
@@ -1083,100 +1143,6 @@ border-bottom-left-radius: 0px;
                      </item>
                     </layout>
                    </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer_10">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>30</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="innerBottom">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>4</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true"/>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_3">
-                  <property name="leftMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="spacing">
-                   <number>0</number>
-                  </property>
-                  <item row="0" column="1">
-                   <widget class="QListView" name="image_listView">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>3</verstretch>
-                     </sizepolicy>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="0">
-                   <spacer name="listView_space_left">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>30</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item row="0" column="2">
-                   <spacer name="listView_space_right">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Preferred</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>30</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
                   </item>
                  </layout>
                 </widget>
