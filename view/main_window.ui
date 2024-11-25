@@ -143,7 +143,7 @@ border-bottom-right-radius: 0px;
              </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>20</width>
+               <width>30</width>
                <height>20</height>
               </size>
              </property>
@@ -368,7 +368,7 @@ QPushButton:hover{
          <widget class="QFrame" name="ToolbarFrame">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>1</horstretch>
+            <horstretch>2</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
@@ -594,7 +594,7 @@ QPushButton:default {
          <widget class="QFrame" name="frame_7">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>16</horstretch>
+            <horstretch>27</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
@@ -727,6 +727,9 @@ border-bottom-right-radius: 5px;
                      </property>
                      <item>
                       <widget class="QToolButton" name="openFile">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -768,6 +771,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item>
                       <widget class="QToolButton" name="start_reg">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -810,7 +816,7 @@ border-bottom-right-radius: 5px;
                      <item>
                       <widget class="QToolButton" name="output_word">
                        <property name="enabled">
-                        <bool>true</bool>
+                        <bool>false</bool>
                        </property>
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -874,6 +880,9 @@ border-bottom-right-radius: 5px;
                     <layout class="QGridLayout" name="gridLayout_3">
                      <item row="1" column="7">
                       <widget class="QRadioButton" name="channel_15">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>15</string>
                        </property>
@@ -881,6 +890,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="2">
                       <widget class="QRadioButton" name="channel_2">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>2</string>
                        </property>
@@ -888,6 +900,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="3">
                       <widget class="QRadioButton" name="channel_11">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>11</string>
                        </property>
@@ -895,6 +910,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="3">
                       <widget class="QRadioButton" name="channel_3">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>3</string>
                        </property>
@@ -902,6 +920,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="4">
                       <widget class="QRadioButton" name="channel_4">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>4</string>
                        </property>
@@ -909,6 +930,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="7">
                       <widget class="QRadioButton" name="channel_7">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>7</string>
                        </property>
@@ -916,6 +940,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="1">
                       <widget class="QRadioButton" name="channel_1">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -929,6 +956,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="6">
                       <widget class="QRadioButton" name="channel_14">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>14</string>
                        </property>
@@ -936,6 +966,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="1">
                       <widget class="QRadioButton" name="channel_9">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>9</string>
                        </property>
@@ -943,6 +976,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="5">
                       <widget class="QRadioButton" name="channel_13">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>13</string>
                        </property>
@@ -950,6 +986,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="8">
                       <widget class="QRadioButton" name="channel_16">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>16</string>
                        </property>
@@ -957,6 +996,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="6">
                       <widget class="QRadioButton" name="channel_6">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>6</string>
                        </property>
@@ -964,6 +1006,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="4">
                       <widget class="QRadioButton" name="channel_12">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>12</string>
                        </property>
@@ -971,6 +1016,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="5">
                       <widget class="QRadioButton" name="channel_5">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>5</string>
                        </property>
@@ -978,6 +1026,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="1" column="2">
                       <widget class="QRadioButton" name="channel_10">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>10</string>
                        </property>
@@ -985,6 +1036,9 @@ border-bottom-right-radius: 5px;
                      </item>
                      <item row="0" column="8">
                       <widget class="QRadioButton" name="channel_8">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="text">
                         <string>8</string>
                        </property>
